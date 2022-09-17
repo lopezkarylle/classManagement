@@ -1,35 +1,52 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>10</x><y>240</y><w>210</w><h>120</h></coordinates><panel_attributes>Student
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>110</x><y>330</y><w>210</w><h>200</h></coordinates><panel_attributes>Student
 --
 #id: int 
-#name: varchar 
+#first_name: varchar
+#last_name: varchar
+#student_number: varchar
+#email: varchar
+#contact: varchar
+#program: varchar
 --
-+addSData(name)
-+updateSData(id, name)
-+removeSData()
-+viewClasses(code, name)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>30</y><w>210</w><h>150</h></coordinates><panel_attributes>Class
++addStudent(name)
++updateStudent(id, name)
++removeStudent()
++viewClasses(code, name)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>60</y><w>210</w><h>230</h></coordinates><panel_attributes>Class
 --
 #id: int 
 #name: varchar
-#description:varchar 
 #code: varchar 
+#description:varchar 
+#teacher_id: int 
+
 --
 +addClass (name, desc, code)
 +updateClass (name, desc, code)
 +removeClass()
-+assignTeacherClass (teacher)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>30</y><w>210</w><h>150</h></coordinates><panel_attributes>Teacher
++assignTeacher (teacher)
++getName
++getDescription
++getCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>60</y><w>210</w><h>210</h></coordinates><panel_attributes>Teacher
 --
 #id: int 
-#name: varchar
+#first_name: varchar
+#last_name: varchar
+#email: varchar
+#contact: varchar
+#employee_number: int
 --
-+addTData(name)
-+updateTData(id, name)
-+removeTData
-+viewClasses(id, name)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>240</y><w>210</w><h>150</h></coordinates><panel_attributes>Class Roster
++addTeacher(name)
++updateTeacher(id, name)
++removeTeacher
++viewClasses(id, name)
++getName
++getEmail</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>330</y><w>210</w><h>140</h></coordinates><panel_attributes>Class Roster
 --
-#id: int 
-#name: varchar
+#class_code: varchar
+#student_number: varchar
+#enrolled_at: date 
 --
 +openClass(id, name, desc, code)
 +addStudent(id, name)
 +removeStudent()
-+exportClass(id, name)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>310</y><w>270</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;250;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>100</y><w>260</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>130</y><w>270</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;250;110</additional_attributes></element></diagram>
++exportClass(id, name)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>400</y><w>270</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;250;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>130</y><w>260</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>160</y><w>270</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;250;170</additional_attributes></element></diagram>
